@@ -1,0 +1,248 @@
+.dashboard-list {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f0f0f5;
+  display: flex;
+  overflow: hidden;
+}
+
+.search-cases {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  gap: 12px;
+}
+
+.list-contente {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.manual { background-color: #838383; }
+
+.facebook { background-color: #1877f2; }
+
+.instagram { background-color: #e1306c; }
+
+.whatsapp { background-color: #25d366; }
+
+.telegram { background-color: #0088cc; }
+
+.tiktok { background-color: #000000; }
+
+.list-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  flex: 1;
+  padding: 20px 0px 0px 0px;
+  margin: 20px 0px 0px 0px;
+  overflow-y: auto;
+  min-height: 0;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.cases-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  flex: 1;
+}
+
+.cases-table thead tr {
+  border-bottom: 2px solid #f0f0f5;
+}
+
+.cases-table th {
+  padding: 16px;
+  text-align: left;
+  font-size: 14px;
+  color: #41b8b5;
+  font-weight: bold;
+}
+
+.cases-table tbody tr {
+  border-bottom: 1px solid #f0f0f5;
+}
+
+.cases-table td {
+  padding: 16px;
+  font-size: 14px;
+  color: #555;
+}
+
+.fonte {
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.facebook {
+  background-color: #1877f2;
+}
+.instagram {
+  background-color: #e1306c;
+}
+.whatsapp {
+  background-color: #25d366;
+}
+
+.situacao {
+  padding: 6px 12px;
+  border-radius: 20px;
+  background-color: #cc00ff;
+  color: #fff;
+  font-size: 13px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #41b8b5;
+  padding: 14px;
+  border-radius: 0 0 10px 10px;
+}
+
+.pagination button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.pagination select {
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: none;
+  font-size: 14px;
+}
+
+.filtros-ativos {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: #838383;
+}
+
+.tag-filtro {
+  background-color: #41b8b5;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.filtros-ativos button {
+  border: none;
+  background: none;
+  color: #f44336;
+  cursor: pointer;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+/* Linha oculta de "Sem análise" na col vazia */
+.col-analise-desktop {
+  display: table-cell;
+}
+
+/* ===== RESPONSIVO - TABLET (max 1024px) ===== */
+@media (max-width: 1024px) {
+  .list-contente {
+    padding: 20px;
+  }
+}
+
+/* ===== RESPONSIVO - MOBILE (max 768px) ===== */
+@media (max-width: 768px) {
+  .dashboard-list {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+    padding-top: 60px; /* topbar */
+  }
+
+  .list-contente {
+    padding: 16px;
+    overflow: visible;
+    flex: 1;
+  }
+
+  .search-cases {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .list-data {
+    margin: 12px 0px 0px 0px;
+    min-height: 0;
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  /* Tabela com scroll horizontal */
+  .cases-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cases-table th,
+  .cases-table td {
+    padding: 12px 10px;
+    font-size: 13px;
+  }
+
+  /* Oculta coluna de análise (vazia) em mobile */
+  .cases-table th:last-child,
+  .cases-table td:last-child {
+    display: none;
+  }
+
+  .situacao {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+
+  .fonte {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+}
+
+/* ===== RESPONSIVO - MOBILE PEQUENO (max 480px) ===== */
+@media (max-width: 480px) {
+  .cases-table th:nth-child(1),
+  .cases-table td:nth-child(1) {
+    min-width: 80px;
+  }
+
+  .cases-table th:nth-child(3),
+  .cases-table td:nth-child(3) {
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

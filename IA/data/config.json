@@ -1,0 +1,55 @@
+{
+  "risk_thresholds": {
+    "alto": {
+      "suspicious_prob_min": 0.80,
+      "confidence_min": 0.60
+    },
+    "medio": {
+      "suspicious_prob_min": 0.60,
+      "confidence_min": 0.30
+    },
+    "baixo": {
+      "suspicious_prob_min": 0.0,
+      "confidence_min": 0.0
+    },
+    "legit_prob_max_for_flag": 0.15
+  },
+  "modules": {
+    "use_sabia_by_default": false,
+    "use_sabia_on_batch": false,
+    "use_link_analyzer": true,
+    "use_rag": true,
+    "use_ml_classifier": true
+  },
+  "link_analyzer": {
+    "risk_score_alto": 60,
+    "risk_score_medio": 30,
+    "risk_score_baixo": 10
+  },
+  "rag": {
+    "top_k_chunks": 3,
+    "chunk_size": 400,
+    "chunk_overlap": 80
+  },
+  "classifier": {
+    "model_type": "logreg",
+    "test_size": 0.15
+  },
+  "api": {
+    "max_batch_size": 100,
+    "max_text_length": 10000
+  },
+  "fraud_types": [
+    {"code": "GOLPE_01", "label": "phishing",              "name": "Phishing"},
+    {"code": "GOLPE_02", "label": "golpe_pix",             "name": "Golpe do PIX"},
+    {"code": "GOLPE_03", "label": "falso_emprestimo",      "name": "Falso Empréstimo / FGTS"},
+    {"code": "GOLPE_04", "label": "falsa_promocao",        "name": "Falsa Promoção / Sorteio"},
+    {"code": "GOLPE_05", "label": "falso_servico",         "name": "Falso Serviço"},
+    {"code": "GOLPE_06", "label": "engenharia_social",     "name": "Engenharia Social"},
+    {"code": "GOLPE_07", "label": "clonagem_conta",        "name": "Clonagem de Conta"},
+    {"code": "GOLPE_08", "label": "falso_investimento",    "name": "Falso Investimento / Pirâmide"},
+    {"code": "GOLPE_09", "label": "golpe_suporte_tecnico", "name": "Golpe de Suporte Técnico"},
+    {"code": "GOLPE_10", "label": "golpe_qr_code",         "name": "Golpe do QR Code"},
+    {"code": "GOLPE_11", "label": "golpe_delivery",        "name": "Golpe de Delivery / Compra Online"}
+  ]
+}

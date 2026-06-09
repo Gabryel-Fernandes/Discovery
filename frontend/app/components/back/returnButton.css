@@ -1,0 +1,32 @@
+.return {
+  height: 70px;
+  width: 200px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #ff6400;
+  background-color: #ffffff;
+  flex-shrink: 0;
+}
+
+.return:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 4px 4px 8px;
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+.return:active {
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 2px;
+  transform: translateY(2px);
+}
+
+/* ===== RESPONSIVO - MOBILE (max 768px) ===== */
+@media (max-width: 768px) {
+  .return {
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+  }
+}

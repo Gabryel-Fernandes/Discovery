@@ -1,0 +1,24 @@
+dIscovery AI — Relatório de Avaliação
+Gerado em: 2026-05-15T16:04:17.155810
+Modelo: logreg
+
+Amostras de treino: 177
+Acurácia (hold-out 15%): 72.22%
+F1 cross-validation (5-fold): 76.75% ± 11.05%
+
+Conjunto manual (19 exemplos):
+  Acurácia: 100.00%
+  Falsos positivos: 0
+  Falsos negativos: 0
+
+Métricas por classe:
+  engenharia_social         P=0.33 R=1.00 F1=0.50 (n=1.0)
+  falsa_promocao            P=0.50 R=1.00 F1=0.67 (n=2.0)
+  falso_emprestimo          P=1.00 R=1.00 F1=1.00 (n=1.0)
+  falso_investimento        P=1.00 R=1.00 F1=1.00 (n=2.0)
+  falso_servico             P=1.00 R=1.00 F1=1.00 (n=1.0)
+  golpe_pix                 P=0.75 R=0.60 F1=0.67 (n=5.0)
+  golpe_qr_code             P=1.00 R=0.83 F1=0.91 (n=6.0)
+  golpe_suporte_tecnico     P=1.00 R=1.00 F1=1.00 (n=1.0)
+  legitimo                  P=1.00 R=0.71 F1=0.83 (n=7.0)
+  phishing                  P=0.00 R=0.00 F1=0.00 (n=1.0)

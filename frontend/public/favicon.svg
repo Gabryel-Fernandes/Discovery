@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <!-- Fundo -->
+  <rect x="0" y="0" width="256" height="256" rx="52" fill="#41B8B5"/>
+  
+  <!-- Barra vertical do D -->
+  <rect x="58" y="52" width="32" height="152" rx="10" fill="white"/>
+  
+  <!-- Curva do D -->
+  <path d="M 78 52 Q 210 52 210 128 Q 210 204 78 204" 
+        fill="none" stroke="white" stroke-width="32" stroke-linecap="round"/>
+  
+  <!-- Ponto estilizado -->
+  <circle cx="186" cy="190" r="22" fill="#2C3E50" opacity="0.85"/>
+  <circle cx="186" cy="190" r="13" fill="white"/>
+</svg>

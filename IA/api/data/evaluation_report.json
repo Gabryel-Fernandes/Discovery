@@ -1,0 +1,102 @@
+{
+  "generated_at": "2026-05-15T16:04:17.155810",
+  "model_type": "logreg",
+  "training_samples": 177,
+  "classes": [
+    "clonagem_conta",
+    "engenharia_social",
+    "falsa_promocao",
+    "falso_emprestimo",
+    "falso_investimento",
+    "falso_servico",
+    "golpe_delivery",
+    "golpe_pix",
+    "golpe_qr_code",
+    "golpe_suporte_tecnico",
+    "legitimo",
+    "phishing"
+  ],
+  "holdout_evaluation": {
+    "accuracy": 0.7222222222222222,
+    "n_test": 36
+  },
+  "cross_validation": {
+    "folds": 5,
+    "f1_weighted_mean": 0.7675,
+    "f1_weighted_std": 0.1105
+  },
+  "manual_test_set": {
+    "total": 19,
+    "accuracy": 1.0,
+    "errors": 0,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "error_details": []
+  },
+  "per_class_metrics": {
+    "engenharia_social": {
+      "precision": 0.333,
+      "recall": 1.0,
+      "f1": 0.5,
+      "support": 1.0
+    },
+    "falsa_promocao": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.667,
+      "support": 2.0
+    },
+    "falso_emprestimo": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 1.0
+    },
+    "falso_investimento": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 2.0
+    },
+    "falso_servico": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 1.0
+    },
+    "golpe_pix": {
+      "precision": 0.75,
+      "recall": 0.6,
+      "f1": 0.667,
+      "support": 5.0
+    },
+    "golpe_qr_code": {
+      "precision": 1.0,
+      "recall": 0.833,
+      "f1": 0.909,
+      "support": 6.0
+    },
+    "golpe_suporte_tecnico": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 1.0
+    },
+    "legitimo": {
+      "precision": 1.0,
+      "recall": 0.714,
+      "f1": 0.833,
+      "support": 7.0
+    },
+    "phishing": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 1.0
+    }
+  },
+  "overall": {
+    "macro_f1": 0.7576,
+    "weighted_f1": 0.7946
+  }
+}

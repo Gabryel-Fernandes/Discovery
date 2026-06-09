@@ -1,0 +1,14 @@
+.env
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Next.js
+.next/
+node_modules/
+
+# Docker volumes
+postgres_data/
+

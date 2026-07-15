@@ -1,0 +1,355 @@
+/* [project]/app/manual_analysis/manual_analysis.css [app-client] (css) */
+.dashboard {
+  background-color: #f0f0f5;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.contente-geral {
+  flex-direction: column;
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  overflow: hidden;
+}
+
+.interactions-verify {
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  height: 70px;
+  display: flex;
+}
+
+.select-verify {
+  color: #41b8b5;
+  align-items: center;
+  gap: 50px;
+  font-size: 22px;
+  font-weight: bold;
+  display: flex;
+}
+
+.mark-verify {
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+
+.mark-verify input {
+  appearance: none;
+  border: 2px solid #838383;
+  border-radius: 4px;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+}
+
+.mark-verify input[type="checkbox"]:checked {
+  background-color: #41b8b5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  border-color: #41b8b5;
+  transition: background-color .2s, border-color .2s, color .2s;
+}
+
+.data-ma {
+  flex: 1;
+  gap: 30px;
+  width: 100%;
+  min-height: 0;
+  padding: 20px 0 0;
+  display: flex;
+  overflow-y: auto;
+}
+
+.inspection {
+  flex-direction: column;
+  gap: 12px;
+  width: 30%;
+  height: 100%;
+  display: flex;
+}
+
+.put-text textarea {
+  resize: none;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  width: 100%;
+  height: 280px;
+  padding: 10px;
+  box-shadow: 2.4px 2.4px 3.2px #00000026;
+}
+
+.links-container {
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  display: flex;
+}
+
+.link-input {
+  color: #838383;
+  border: 2px solid #41b8b5;
+  border-radius: 10px;
+  outline: none;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  box-shadow: 2.4px 2.4px 3.2px #00000026;
+}
+
+.add-link {
+  color: #41b8b5;
+  cursor: pointer;
+  background-color: #fff;
+  border: 2px dashed #41b8b5;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all .2s;
+}
+
+.add-link:hover {
+  color: #fff;
+  background-color: #41b8b5;
+}
+
+.btn-analisar {
+  color: #fff;
+  cursor: pointer;
+  background-color: #41b8b5;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all .15s;
+}
+
+.btn-analisar:hover {
+  opacity: .9;
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 8px #00000040;
+}
+
+.btn-analisar:active {
+  transform: translateY(2px);
+  box-shadow: 1px 1px 2px #0000001a;
+}
+
+.btn-analisar:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.medidor {
+  background-color: #fff;
+  border-radius: 10px;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  box-shadow: 2.4px 2.4px 3.2px #00000026;
+}
+
+.medidor-resultado {
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  display: flex;
+}
+
+.risco-label {
+  color: #41b8b5;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.details {
+  background-color: #fff;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 67%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  box-shadow: 2.4px 2.4px 3.2px #00000026;
+}
+
+.container-detais {
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 1px 2px #3c40434d, 0 2px 6px 2px #3c404326;
+}
+
+.list-details {
+  flex-direction: column;
+  gap: 16px;
+  display: flex;
+}
+
+.detail-item {
+  flex-direction: column;
+  gap: 6px;
+  display: flex;
+}
+
+.detail-label {
+  color: #838383;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.detail-bar {
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+
+.detail-fill {
+  background-color: #41b8b5;
+  border-radius: 10px;
+  height: 8px;
+  transition: width .5s;
+}
+
+.detail-bar span {
+  color: #41b8b5;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.result-details {
+  flex-direction: column;
+  gap: 10px;
+  display: flex;
+}
+
+.accordion {
+  cursor: pointer;
+  background-color: #fff;
+  border: 2px solid #838383;
+  border-radius: 10px;
+  padding: 16px 20px;
+}
+
+.accordion summary {
+  color: #838383;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  list-style: none;
+  display: flex;
+}
+
+.accordion summary:after {
+  content: "∨";
+  color: #838383;
+  font-size: 18px;
+}
+
+.accordion[open] summary:after {
+  content: "∧";
+}
+
+@media (max-width: 1024px) {
+  .data-ma {
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+  }
+
+  .inspection {
+    width: 100%;
+    height: auto;
+  }
+
+  .details {
+    gap: 16px;
+    width: 100%;
+    height: auto;
+  }
+
+  .put-text textarea {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    padding-top: 60px;
+    overflow-y: auto;
+  }
+
+  .contente-geral {
+    padding: 16px;
+    overflow: visible;
+  }
+
+  .interactions-verify {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    height: auto;
+  }
+
+  .select-verify {
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 16px;
+  }
+
+  .data-ma {
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 12px;
+    overflow: visible;
+  }
+
+  .inspection {
+    width: 100%;
+    height: auto;
+  }
+
+  .put-text textarea {
+    height: 180px;
+  }
+
+  .medidor {
+    flex: none;
+    min-height: 180px;
+  }
+
+  .details {
+    gap: 16px;
+    width: 100%;
+    height: auto;
+    padding: 16px;
+  }
+
+  .container-detais {
+    padding: 14px;
+  }
+
+  .detail-label, .accordion summary {
+    font-size: 14px;
+  }
+}
+
+/*# sourceMappingURL=app_manual_analysis_manual_analysis_css_bad6b30c._.single.css.map*/

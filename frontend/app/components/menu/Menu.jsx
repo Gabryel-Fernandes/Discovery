@@ -10,7 +10,7 @@ export default function Menu() {
 
   return (
     <>
-      {/* Topbar mobile */}
+      {}
       <div className="mobile-topbar">
         <img className="logo-mobile" src="/discovery_logo.svg" alt="Logo" />
         <button
@@ -22,7 +22,7 @@ export default function Menu() {
         </button>
       </div>
 
-      {/* Overlay */}
+      {}
       {aberto && (
         <div className="menu-overlay" onClick={() => setAberto(false)} />
       )}

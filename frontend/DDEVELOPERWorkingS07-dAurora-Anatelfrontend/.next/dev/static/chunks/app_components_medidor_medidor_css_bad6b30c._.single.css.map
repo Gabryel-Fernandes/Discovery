@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/components/medidor/medidor.css"],"sourcesContent":[".medidor-container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  justify-content: start;\r\n  width: 100%;\r\n  height: 100%;\r\n}\r\n\r\n.medidor-valor {\r\n  font-size: 14px;\r\n  font-weight: bold;\r\n}\r\n\r\n.medidor-risco {\r\n  font-size: 12px;\r\n  color: #838383;\r\n  margin-top: 6px;\r\n}\r\n"],"names":[],"mappings":"AAAA;;;;;;;;;AASA;;;;;AAKA"}}]
+}

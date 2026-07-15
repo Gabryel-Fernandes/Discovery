@@ -1,14 +1,76 @@
+# ==========================
+# Environment variables
+# ==========================
 .env
-# Python cache
+**/.env
+!.env.example
+!**/.env.example
+
+# ==========================
+# Python (backend, ia, scraping)
+# ==========================
 __pycache__/
-*.pyc
+**/__pycache__/
+*.py[cod]
 *.pyo
 *.pyd
+*.egg-info/
+**/*.egg-info/
+.pytest_cache/
+**/.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+venv/
+.venv/
+**/venv/
+**/.venv/
 
-# Next.js
-.next/
-node_modules/
+# ==========================
+# Telethon sessions (scraping)
+# ==========================
+*.session
+*.session-journal
+scraping/discovery_session.session
 
-# Docker volumes
+# ==========================
+# Frontend (Next.js)
+# ==========================
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build
+frontend/coverage/
+frontend/.pnp
+frontend/.pnp.*
+frontend/.yarn/*
+!frontend/.yarn/patches
+!frontend/.yarn/plugins
+!frontend/.yarn/releases
+!frontend/.yarn/versions
+frontend/.vercel
+frontend/*.tsbuildinfo
+frontend/next-env.d.ts
+
+# ==========================
+# Docker
+# ==========================
 postgres_data/
 
+# ==========================
+# Logs
+# ==========================
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ==========================
+# IDE / OS
+# ==========================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.pem

@@ -256,7 +256,7 @@ export default function Dashboard() {
                   className="inativo"
                   onClick={() => router.push("/list")}
                 >
-                  MORE &gt;
+                  MAIS &gt;
                 </button>
               </div>
             </div>
@@ -374,7 +374,7 @@ export default function Dashboard() {
             </ul>
 
             <div className="grafic-bar">
-              <BarChart width={420} height={260} data={estatisticas}>
+              <BarChart width={300} height={200} data={estatisticas}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis
                   dataKey="situacao"

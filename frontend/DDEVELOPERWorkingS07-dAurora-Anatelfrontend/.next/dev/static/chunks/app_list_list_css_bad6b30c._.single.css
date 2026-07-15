@@ -1,61 +1,62 @@
+/* [project]/app/list/list.css [app-client] (css) */
 .dashboard-list {
-  height: 100vh;
-  width: 100vw;
   background-color: #f0f0f5;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   overflow: hidden;
 }
 
 .search-cases {
-  display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
   width: 100%;
   height: 70px;
-  gap: 12px;
+  display: flex;
 }
 
 .list-contente {
-  display: flex;
   flex-direction: column;
-  padding: 30px;
   flex: 1;
+  padding: 30px;
+  display: flex;
   overflow: hidden;
 }
 
-.manual { background-color: #838383; }
+.manual {
+  background-color: #838383;
+}
 
-.facebook { background-color: #1877f2; }
+.telegram {
+  background-color: #08c;
+}
 
-.instagram { background-color: #e1306c; }
-
-.whatsapp { background-color: #25d366; }
-
-.telegram { background-color: #0088cc; }
-
-.tiktok { background-color: #000000; }
+.tiktok {
+  background-color: #000;
+}
 
 .list-data {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  flex: 1;
-  padding: 20px 0px 0px 0px;
-  margin: 20px 0px 0px 0px;
-  overflow-y: auto;
-  min-height: 0;
   background-color: #fff;
   border-radius: 10px;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 0;
+  margin: 20px 0 0;
+  padding: 20px 0 0;
+  display: flex;
+  overflow-y: auto;
 }
 
 .cases-table {
-  width: 100%;
   border-collapse: collapse;
   background-color: #fff;
   border-radius: 10px;
-  overflow: hidden;
   flex: 1;
+  width: 100%;
+  overflow: hidden;
 }
 
 .cases-table thead tr {
@@ -63,10 +64,10 @@
 }
 
 .cases-table th {
-  padding: 16px;
   text-align: left;
-  font-size: 14px;
   color: #41b8b5;
+  padding: 16px;
+  font-size: 14px;
   font-weight: bold;
 }
 
@@ -75,85 +76,87 @@
 }
 
 .cases-table td {
+  color: #555;
   padding: 16px;
   font-size: 14px;
-  color: #555;
 }
 
 .fonte {
-  padding: 6px 12px;
-  border-radius: 6px;
   color: #fff;
-  font-weight: bold;
+  border-radius: 6px;
+  padding: 6px 12px;
   font-size: 13px;
+  font-weight: bold;
 }
 
 .facebook {
   background-color: #1877f2;
 }
+
 .instagram {
   background-color: #e1306c;
 }
+
 .whatsapp {
   background-color: #25d366;
 }
 
 .situacao {
-  padding: 6px 12px;
-  border-radius: 20px;
-  background-color: #cc00ff;
   color: #fff;
+  background-color: #c0f;
+  border-radius: 20px;
+  padding: 6px 12px;
   font-size: 13px;
 }
 
 .pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
   background-color: #41b8b5;
-  padding: 14px;
   border-radius: 0 0 10px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 14px;
+  display: flex;
 }
 
 .pagination button {
+  color: #fff;
+  cursor: pointer;
   background: none;
   border: none;
-  color: #fff;
   font-size: 20px;
-  cursor: pointer;
 }
 
 .pagination select {
-  padding: 4px 10px;
-  border-radius: 20px;
   border: none;
+  border-radius: 20px;
+  padding: 4px 10px;
   font-size: 14px;
 }
 
 .filtros-ativos {
-  display: flex;
+  color: #838383;
+  flex-wrap: wrap;
   align-items: center;
   gap: 8px;
-  padding: 8px 0px;
-  flex-wrap: wrap;
+  padding: 8px 0;
   font-size: 13px;
-  color: #838383;
+  display: flex;
 }
 
 .tag-filtro {
-  background-color: #41b8b5;
   color: #fff;
-  padding: 4px 10px;
+  background-color: #41b8b5;
   border-radius: 20px;
+  padding: 4px 10px;
   font-size: 12px;
 }
 
 .filtros-ativos button {
-  border: none;
-  background: none;
   color: #f44336;
   cursor: pointer;
+  background: none;
+  border: none;
   font-size: 12px;
   text-decoration: underline;
 }
@@ -162,7 +165,6 @@
   display: table-cell;
 }
 
-/* ===== RESPONSIVO - TABLET (max 1024px) ===== */
 @media (max-width: 1024px) {
   .list-contente {
     padding: 20px;
@@ -174,71 +176,63 @@
     flex-direction: column;
     height: auto;
     min-height: 100vh;
-    overflow-y: auto;
     padding-top: 60px;
+    overflow-y: auto;
   }
 
   .list-contente {
+    flex: 1;
     padding: 16px;
     overflow: visible;
-    flex: 1;
   }
 
   .search-cases {
     flex-direction: column;
-    height: auto;
-    gap: 10px;
     align-items: stretch;
+    gap: 10px;
+    height: auto;
   }
 
   .list-data {
-    margin: 12px 0px 0px 0px;
-    min-height: 0;
     flex: 1;
+    min-height: 0;
+    margin: 12px 0 0;
     overflow-y: auto;
   }
 
   .cases-table {
-    display: block;
-    overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
+    display: block;
+    overflow-x: auto;
   }
 
-  .cases-table th,
-  .cases-table td {
+  .cases-table th, .cases-table td {
     padding: 12px 10px;
     font-size: 13px;
   }
 
-  .cases-table th:last-child,
-  .cases-table td:last-child {
+  .cases-table th:last-child, .cases-table td:last-child {
     display: none;
   }
 
-  .situacao {
-    font-size: 11px;
+  .situacao, .fonte {
     padding: 4px 8px;
-  }
-
-  .fonte {
     font-size: 11px;
-    padding: 4px 8px;
   }
 }
 
-/* ===== RESPONSIVO - MOBILE PEQUENO (max 480px) ===== */
 @media (max-width: 480px) {
-  .cases-table th:nth-child(1),
-  .cases-table td:nth-child(1) {
+  .cases-table th:first-child, .cases-table td:first-child {
     min-width: 80px;
   }
 
-  .cases-table th:nth-child(3),
-  .cases-table td:nth-child(3) {
-    max-width: 120px;
-    overflow: hidden;
+  .cases-table th:nth-child(3), .cases-table td:nth-child(3) {
     text-overflow: ellipsis;
     white-space: nowrap;
+    max-width: 120px;
+    overflow: hidden;
   }
 }
+
+/*# sourceMappingURL=app_list_list_css_bad6b30c._.single.css.map*/

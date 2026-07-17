@@ -96,8 +96,7 @@ export default function List() {
                 <th>DATA</th>
                 <th>FONTE</th>
                 <th>TITULO</th>
-                <th>SITUAÇÃO</th>
-                <th>ANALISE</th>
+                <th>ESTIMATIVA</th>
               </tr>
             </thead>
             <tbody>

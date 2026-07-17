@@ -68,13 +68,17 @@ async def analisar_texto_endpoint(req: TextoRequest, db: Session = Depends(get_d
 @router.post("/url")
 async def analisar_url_endpoint(req: URLRequest, db: Session = Depends(get_db)):
     try:
-        resultado = await analisar_url(
-            url=req.url,
+        resultado = await analisar_texto(
+            text=req.url,
             use_sabia=req.use_sabia,
         )
 
         data = resultado.get("data", {})
-        veracidade = data.get("risk_score", 0) / 100
+        ml = data.get("ml_classification", {})
+
+        confidence = data.get("confidence", 0)
+        is_suspicious = data.get("is_suspicious", False)
+        veracidade = confidence if is_suspicious else (1 - confidence)
 
         novo_caso = Caso(
             data_publicacao=datetime.utcnow(),
@@ -92,10 +96,10 @@ async def analisar_url_endpoint(req: URLRequest, db: Session = Depends(get_db)):
             caso_id=novo_caso.id,
             usuario_id=None,
             veracidade=veracidade,
-            erros_ortograficos=0,
-            uso_ia_generativa=0,
-            links_suspeitos=1 if data.get("is_suspicious") else 0,
-            taxonomia_repetitiva=0,
+            erros_ortograficos=round(ml.get("probabilities", {}).get("phishing", 0) * 100),
+            uso_ia_generativa=round(ml.get("probabilities", {}).get("falso_investimento", 0) * 100),
+            links_suspeitos=len(data.get("suspicious_links", [])),
+            taxonomia_repetitiva=round(ml.get("confidence", 0) * 100),
             tipo="manual_url",
         )
         db.add(nova_analise)

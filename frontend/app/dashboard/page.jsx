@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import Menu from "../components/menu/Menu";
 import SearchBar from "../components/search/SearchBar";
 import Medidor from "../components/medidor/Medidor";
+import { useAuth } from "../hooks/Useauth";
 import "./dashboard.css";
 import {
   PieChart,
@@ -22,6 +23,8 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 export default function Dashboard() {
   const router = useRouter();
+  const { usuario, carregando: carregandoAuth, logout: logoutAuth } = useAuth();
+
   const [casos, setCasos] = useState([]);
   const [casoAtivo, setCasoAtivo] = useState(0);
   const [analise, setAnalise] = useState(null);
@@ -41,7 +44,7 @@ export default function Dashboard() {
     web: 0,
     manual: 0,
   });
-
+  
   const buscarTudo = (
     fonte = filtroFonte,
     tipo = filtroTipo,
@@ -153,9 +156,24 @@ export default function Dashboard() {
   const porcentagemGolpe =
     totalCasos > 0 ? Math.round((totalGolpe / totalCasos) * 100) : 0;
 
+  if (carregandoAuth) {
+    return (
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "100vh",
+        }}
+      >
+        Carregando...
+      </div>
+    );
+  }
+
   return (
     <div className="dashboard">
-      <Menu />
+      <Menu usuario={usuario} />
       <div className="contente-geral">
         <div className="search-interactions">
           <div className="periodo">
@@ -222,7 +240,7 @@ export default function Dashboard() {
             </div>
           </div>
           <SearchBar placeholder="BUSQUE SEU CASO AQUI" />
-          <button className="sair">
+          <button className="sair" onClick={logoutAuth}>
             <i className="fa-solid fa-right-from-bracket"></i>
             SAIR
           </button>
@@ -347,7 +365,7 @@ export default function Dashboard() {
                     : "Fonte vazia • 0 casos"}
                 </span>
               </li>
-              <li  className="telegram ">
+              <li className="telegram ">
                 <span>TELEGRAM</span>
                 <span>
                   {fontes.telegram > 0

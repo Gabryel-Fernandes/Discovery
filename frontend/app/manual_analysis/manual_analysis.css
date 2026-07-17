@@ -76,7 +76,7 @@
 
 .put-text textarea {
   width: 100%;
-  height: 280px;
+  height: 190px;
   outline: none;
   border: none;
   border-radius: 10px;
@@ -122,12 +122,12 @@
 
 .btn-analisar {
   width: 100%;
-  padding: 14px;
+  padding: 10px;
   background-color: #41b8b5;
   color: #fff;
   border: none;
   border-radius: 10px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.15s ease;
@@ -161,6 +161,7 @@
   align-items: center;
   justify-content: center;
   padding: 16px;
+  margin-bottom: 6px;
 }
 
 .medidor-resultado {
@@ -181,23 +182,23 @@
   justify-content: space-between;
   flex-direction: column;
   width: 67%;
-  height: 100%;
   background-color: #ffffff;
-  padding: 20px;
+  padding: 14px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  margin: 0px 6px 6px 0px;
 }
 
 .container-detais {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   border-radius: 10px;
-  padding: 20px;
+  padding: 10px 20px;
 }
 
 .list-details {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
 }
 
 .detail-item {
@@ -207,7 +208,7 @@
 }
 
 .detail-label {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   color: #838383;
 }
@@ -216,6 +217,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  font-size: 12px;
 }
 
 .detail-fill {
@@ -241,7 +243,7 @@
   background-color: #fff;
   border-radius: 10px;
   border: 2px solid #838383;
-  padding: 16px 20px;
+  padding: 6px 10px;
   cursor: pointer;
 }
 
@@ -250,7 +252,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 16px;
+  font-size: 12px;
   color: #838383;
 }
 

@@ -1,14 +1,21 @@
-from sqlalchemy import Column, Integer, String, Text, DateTime, Numeric, ForeignKey
+from sqlalchemy import Column, Integer, String, Boolean, Text, DateTime, Numeric, ForeignKey
 from sqlalchemy.orm import relationship
 from datetime import datetime
 from app.core.database import Base
+
 
 class Usuario(Base):
     __tablename__ = "usuarios"
 
     id = Column(Integer, primary_key=True, index=True)
-    nome = Column(String)
-    funcao = Column(String)
+    nome = Column(String, nullable=False)
+    funcao = Column(String, nullable=True)
+    email = Column(String, unique=True, index=True, nullable=False)
+    senha_hash = Column(String, nullable=False)
+    email_verificado = Column(Boolean, default=False)
+    codigo_verificacao = Column(String, nullable=True)
+    codigo_expira_em = Column(DateTime, nullable=True)
+    criado_em = Column(DateTime, default=datetime.utcnow)
 
     analises = relationship("Analise", back_populates="usuario")
     exportacoes = relationship("Exportacao", back_populates="usuario")

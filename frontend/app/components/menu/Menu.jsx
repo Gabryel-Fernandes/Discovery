@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-export default function Menu() {
+export default function Menu({ usuario }) {
   const pathname = usePathname();
   const [aberto, setAberto] = useState(false);
 
@@ -35,8 +35,8 @@ export default function Menu() {
 
           <div className="profile">
             <img src="/icon_profile.svg" alt="" />
-            <h1>NOME DO USUARIO</h1>
-            <span>Função</span>
+            <h1>{usuario?.nome || "NOME DO USUARIO"}</h1>
+            <span>{usuario?.email || "Função"}</span>
           </div>
 
           <div className="bloc">

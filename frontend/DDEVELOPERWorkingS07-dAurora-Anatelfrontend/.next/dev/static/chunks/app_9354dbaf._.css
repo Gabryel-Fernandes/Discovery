@@ -8,7 +8,7 @@
 }
 
 .container-logo img {
-  width: 260px;
+  width: 200px;
   margin: 20px 0 0;
 }
 
@@ -21,7 +21,7 @@
 }
 
 .profile img {
-  width: 160px;
+  width: 120px;
   margin: 0 0 10px;
 }
 
@@ -31,7 +31,7 @@
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  width: 300px;
+  width: 260px;
   height: 100vh;
   font-size: 14px;
   display: flex;
@@ -40,7 +40,7 @@
 }
 
 .menu h1 {
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .menu span {
@@ -48,8 +48,9 @@
   font-size: 15px;
 }
 
-.dashboard-container h2 {
+.bloc h2 {
   margin: 6px 0;
+  font-size: 18px;
 }
 
 .local {
@@ -78,19 +79,22 @@
   flex-direction: column;
   align-items: start;
   gap: 4px;
-  width: 250px;
   display: flex;
 }
 
 .rodape {
   background-color: #41b8b5;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   gap: 20px;
   width: 100%;
-  height: 100px;
+  height: 70px;
   margin-top: auto;
   display: flex;
+}
+
+.rodape img {
+  width: 90px;
 }
 
 @media (max-width: 768px) {
@@ -165,7 +169,7 @@
   border-radius: 10px;
   flex-shrink: 0;
   width: 200px;
-  height: 70px;
+  height: 56px;
   font-size: 22px;
   font-weight: bold;
   box-shadow: 2.4px 2.4px 3.2px #00000026;
@@ -199,7 +203,7 @@
   align-items: center;
   gap: 10px;
   width: 500px;
-  height: 100%;
+  height: 56px;
   padding: 0 20px;
   display: flex;
   box-shadow: 2.4px 2.4px 3.2px #00000026;

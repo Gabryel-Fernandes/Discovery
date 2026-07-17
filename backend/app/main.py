@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.core.database import engine, Base
 from app.api import casos, analises, usuarios, analise_manual
+from app.routers import auth
 
 Base.metadata.create_all(bind=engine)
 
@@ -15,6 +16,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.include_router(auth.router)
 app.include_router(casos.router)
 app.include_router(analises.router)
 app.include_router(usuarios.router)

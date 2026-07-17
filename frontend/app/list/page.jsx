@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Menu from "../components/menu/Menu";
 import ReturnButton from "../components/back/ReturnButton";
@@ -8,7 +8,7 @@ import "./list.css";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
-export default function List() {
+function ListContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [casos, setCasos] = useState([]);
@@ -170,5 +170,13 @@ export default function List() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function List() {
+  return (
+    <Suspense fallback={<div style={{ padding: 40 }}>Carregando...</div>}>
+      <ListContent />
+    </Suspense>
   );
 }

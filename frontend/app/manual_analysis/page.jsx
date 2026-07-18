@@ -3,6 +3,7 @@
 import { useState } from "react";
 import ReturnButton from "../components/back/ReturnButton";
 import Menu from "../components/menu/Menu";
+import AvisoIA from "../components/Aviso/AvisoIA";
 import { analisarTexto, analisarURL } from "../services/api";
 import "./manual_analysis.css";
 import Medidor from "../components/medidor/Medidor";
@@ -13,6 +14,7 @@ export default function ManualAnalysis() {
   const [links, setLinks] = useState([""]);
   const [resultado, setResultado] = useState(null);
   const [carregando, setCarregando] = useState(false);
+  const [mostrarAviso, setMostrarAviso] = useState(false);
 
   const adicionarLink = () => setLinks([...links, ""]);
 
@@ -22,24 +24,8 @@ export default function ManualAnalysis() {
     setLinks(novosLinks);
   };
 
-  const analisar = async () => {
-    setCarregando(true);
-    try {
-      if (modoLink) {
-        const resultados = await Promise.all(
-          links.map((url) => analisarURL(url)),
-        );
-        setResultado(resultados[0]?.data);
-      } else {
-        const data = await analisarTexto(texto);
-        console.log("RESULTADO TEXTO:", data);
-        setResultado(data?.data);
-      }
-    } catch (error) {
-      console.error("Erro na análise:", error);
-    } finally {
-      setCarregando(false);
-    }
+  const analisar = () => {
+    setMostrarAviso(true);
   };
 
   const veracidade = resultado
@@ -80,6 +66,8 @@ export default function ManualAnalysis() {
     <div className="dashboard">
       <Menu />
       <div className="contente-geral">
+        {mostrarAviso && <AvisoIA onClose={() => setMostrarAviso(false)} />}
+
         <div className="interactions-verify">
           <div className="select-verify">
             <div className="mark-verify">

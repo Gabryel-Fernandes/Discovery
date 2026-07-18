@@ -266,6 +266,64 @@
   content: "∧";
 }
 
+.aviso-ia-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.aviso-ia-modal {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.aviso-ia-icon {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.aviso-ia-modal h3 {
+  color: #333;
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+
+.aviso-ia-modal p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.aviso-ia-btn {
+  margin-top: 12px;
+  padding: 12px 32px;
+  background-color: #41b8b5;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.aviso-ia-btn:hover {
+  background-color: #369592;
+}
+
 /* ===== RESPONSIVO - TABLET (max 1024px) ===== */
 @media (max-width: 1024px) {
   .data-ma {
